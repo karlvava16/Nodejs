@@ -6,11 +6,11 @@ ES modules export-import
 */
 
 // const { User, PI } = require('./User');
-
-import { chalk } from 'chalk';
 import User from './User.js';
+import chalk from 'chalk';
 
-const user = new User('Alex', 22);
+const user = new User('Vlad', 20);
 
 console.log(chalk.blue(user.toString()));
+
 //console.log(PI);

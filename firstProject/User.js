@@ -10,11 +10,11 @@ class User {
     }
 
     getName() {
-        this.#_name;
+        return this.#_name;
     }
 
     getAge() {
-        this.#_name;
+        return this.#_age;
     }
 
     toString() {
@@ -24,4 +24,5 @@ class User {
 
 const PI = 3.14;
 
-module.exports = { User, PI };
+export default User;
+//module.exports = { User, PI };
