@@ -4,3 +4,12 @@
 10.09.2024 14:18 [INFO]: Done task async
 10.09.2024 14:18 [WARN]: File can be corrupted async
 10.09.2024 14:18 [ERROR]: File corrupted async
+10.09.2024 14:22 [INFO]: Done task sync
+10.09.2024 14:22 [WARN]: File can be corrupted sync
+10.09.2024 14:22 [ERROR]: File corrupted sync
+10.09.2024 14:22 [INFO]: Done task sync
+10.09.2024 14:22 [WARN]: File can be corrupted sync
+10.09.2024 14:22 [ERROR]: File corrupted sync
+10.09.2024 14:23 [INFO]: Done task sync
+10.09.2024 14:23 [WARN]: File can be corrupted sync
+10.09.2024 14:23 [ERROR]: File corrupted sync
