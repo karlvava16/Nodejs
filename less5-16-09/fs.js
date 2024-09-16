@@ -9,4 +9,8 @@ const pathToFolder = path.resolve(__dirname, 'files');
 const pathToFile = path.resolve(pathToFolder, 'data.txt');
 
 const buff = Buffer.from('NODEJS Program');
-fs.writeFile(pathToFile, buff);
+fs.writeFile(pathToFile, buff)
+    .then(() => {
+        console.log('Файл успішно записан');
+    })
+    .catch((err) => console.log(err));
