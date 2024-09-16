@@ -12,8 +12,21 @@ console.log(pathToFolder);
 console.log(pathToFile);
 
 const buff = Buffer.from('NODEJS Program');
-fs.writeFile(pathToFile, buff)
-    .then(() => {
-        console.log('Файл успішно записан');
-    })
-    .catch((err) => console.log(err));
+
+const createFolderIfNotExists = async (folderPath) => {
+    await fs.mkdir(folderPath);
+};
+
+const writeFile = async (filePath, buffer) => {
+    await fs.writeFile(filePath, buffer);
+    console.log('Файл успішно записаний');
+};
+
+const readFile = async (filePath) => {
+    const data = await fs.readFile(filePath, 'utf-8');
+    console.log(data);
+};
+
+await createFolderIfNotExists(pathToFolder);
+await writeFile(pathToFile, buff);
+await readFile(pathToFile);
