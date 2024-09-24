@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Form</title>
+    </head>
+    <body>
+        <form id="new_product">
+            <label for="name">Product Name</label>
+            <input type="text" name="name" id="name" />
+            <label for="price">Product Price</label>
+            <input type="number" name="price" id="price" />
+            <button type="submit" id="add_button">Add Product</button>
+            <input type="number" name="id" id="id" placeholder="Product ID" />
+            <button type="button" id="update_button">Update Product</button>
+            <button type="button" id="delete_button">Delete Product</button>
+        </form>
+
+        <div name="view" id="view"></div>
+        <script src="/js/index.js"></script>
+    </body>
+</html>
