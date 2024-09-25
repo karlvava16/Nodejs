@@ -10,7 +10,6 @@ let products = [
     { id: 2, name: 'Samsung S24', price: 800 },
 ];
 
-// Маршрут для форми додавання продукту
 product_routes.route('/').get((req, res) => {
     res.sendFile(path.join(__dirname, '..', 'public', 'pages', 'form.html'));
 });
@@ -27,7 +26,6 @@ product_routes.route('/').post((req, res) => {
     res.status(201).json(newProduct);
 });
 
-// Маршрут для перегляду всіх продуктів
 product_routes.get('/view', (req, res) => {
     res.json(products);
 });
