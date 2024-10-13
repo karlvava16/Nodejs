@@ -3,6 +3,7 @@ import exphbs from 'express-handlebars';
 import cookieParser from 'cookie-parser';
 import path from 'node:path';
 import session from 'express-session';
+import bodyParser from 'body-parser';
 import 'dotenv/config';
 import siteRoutes from './routes/site-routes.js';
 import userRoutes from './routes/user-routes.js';
@@ -26,6 +27,8 @@ server.use(
         },
     }),
 );
+
+server.use(express.urlencoded({ extended: true }));
 server.use(checkUser);
 server.use(express.json());
 //#region handlebars
@@ -38,6 +41,7 @@ server.use(express.static('public'));
 
 server.use(siteRoutes);
 server.use('/user', userRoutes);
+
 server.listen(PORT, () =>
     console.log(`Server is running http://localhost:${PORT}`),
 );

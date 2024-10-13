@@ -20,3 +20,26 @@ export const authUser = (req, res, next) => {
         login,
     });
 };
+
+// middleware/auth.js
+export const authenticateJWT = (req, res, next) => {
+    const token = req.headers['authorization']?.split(' ')[1];
+
+    if (!token) {
+        return res.sendStatus(403); // Forbidden
+    }
+
+    jwt.verify(token, JWT_SECRET, (err, user) => {
+        if (err) {
+            return res.sendStatus(403); // Forbidden
+        }
+
+        req.user = user;
+        next();
+    });
+};
+
+// Add a protected route
+router.get('/profile', authenticateJWT, (req, res) => {
+    res.json({ message: 'Protected route accessed', user: req.user });
+});
