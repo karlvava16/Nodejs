@@ -1,0 +1,25 @@
+GET https://localhost/products/  HTTP/1.1
+
+###
+
+POST https://localhost/products/  HTTP/1.1
+content-type: application/json
+
+{
+    "id": 5,
+    "title": "test product",
+    "price": 34
+}
+
+###
+PUT https://localhost/products/2 HTTP/1.1
+content-type: application/json
+
+{
+    "title":"update product",
+    "price":555
+}
+
+
+###
+DELETE https://localhost/products/2 HTTP/1.1
